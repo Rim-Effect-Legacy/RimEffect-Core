@@ -1,318 +1,319 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_CombatDrone</defName>
-    <label>combat drone</label>
-    <description>Spawns a small combat drone turret which explodes after a short amount of time.</description>
-    <abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
-    <targetMode>Location</targetMode>
-    <range>24</range>
-    <durationTime>1800</durationTime>
-    <cooldownTime>7200</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <iconPath>UI/Abilities/Tech_CombatDrone</iconPath>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-	<castSound>RE_Tech_CombatDrone_Cast</castSound>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Building">
-        <building>RE_Tech_CombatDroneTurret</building>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_CombatDrone</defName>
+		<label>combat drone</label>
+		<description>Spawns a small combat drone turret which explodes after a short amount of time.</description>
+		<abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
+		<targetMode>Location</targetMode>
+		<range>24</range>
+		<durationTime>1800</durationTime>
+		<cooldownTime>7200</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<iconPath>UI/Abilities/Tech_CombatDrone</iconPath>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<castSound>RE_Tech_CombatDrone_Cast</castSound>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Building">
+				<building>RE_Tech_CombatDroneTurret</building>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_CryoBlast</defName>
-    <label>cryo blast</label>
-    <description>Fire a blast of super-freezed sub-atomic particles towards the enemy.</description>
-    <abilityClass>VFECore.Abilities.Ability_ShootProjectile_Snow</abilityClass>
-    <targetMode>Pawn</targetMode>
-    <range>24</range>
-    <cooldownTime>900</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <power>1</power>
-    <iconPath>UI/Abilities/Tech_CryoBlast</iconPath>
-	  <castSound>RE_Tech_CryoBlast_Fire</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
-        <projectile>RE_Tech_CryoBlastProjectile</projectile>
-      </li>
-      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
-        <hediff>Hypothermia</hediff>
-        <severity>0.4</severity>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_CryoBlast</defName>
+		<label>cryo blast</label>
+		<description>Fire a blast of super-freezed sub-atomic particles towards the enemy.</description>
+		<abilityClass>VFECore.Abilities.Ability_ShootProjectile_Snow</abilityClass>
+		<targetMode>Pawn</targetMode>
+		<range>24</range>
+		<cooldownTime>900</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<power>1</power>
+		<iconPath>UI/Abilities/Tech_CryoBlast</iconPath>
+		<castSound>RE_Tech_CryoBlast_Fire</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Projectile">
+				<projectile>RE_Tech_CryoBlastProjectile</projectile>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>Hypothermia</hediff>
+				<severity>0.4</severity>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <ThingDef ParentName="BaseBullet">
-    <defName>RE_Tech_CryoBlastProjectile</defName>
-    <label>cryo blast</label>
-    <thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
-    <graphicData>
-      <texPath>Things/AbilityEffects/Shot_CryoBlast</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Frostbite</damageDef>
-      <armorPenetrationBase>1</armorPenetrationBase>
-      <damageAmountBase>12</damageAmountBase>
-      <speed>70</speed>
-	  <soundExplode>RE_Tech_CryoBlast_Explode</soundExplode>
-    </projectile>
-  </ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RE_Tech_CryoBlastProjectile</defName>
+		<label>cryo blast</label>
+		<thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/AbilityEffects/Shot_CryoBlast</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Frostbite</damageDef>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<damageAmountBase>12</damageAmountBase>
+			<speed>70</speed>
+			<soundExplode>RE_Tech_CryoBlast_Explode</soundExplode>
+		</projectile>
+	</ThingDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_DefenseMatrix</defName>
-    <label>defense matrix</label>
-    <description>Reinforce armor with protective Foucault currents.</description>
-    <abilityClass>VFECore.Abilities.Ability_Barrier</abilityClass>
-    <targetMode>Self</targetMode>
-    <castTime>0</castTime>
-    <power>50</power>
-    <cooldownTime>3600</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <durationTime>600</durationTime>
-    <iconPath>UI/Abilities/Tech_DefenseMatrix</iconPath>
-	<castSound>RE_Tech_DefenseMatrix</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Shield">
-        <shieldTexPath>UI/AbilityShields/ShieldTech</shieldTexPath>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_DefenseMatrix</defName>
+		<label>defense matrix</label>
+		<description>Reinforce armor with protective Foucault currents.</description>
+		<abilityClass>VFECore.Abilities.Ability_Barrier</abilityClass>
+		<targetMode>Self</targetMode>
+		<castTime>0</castTime>
+		<power>50</power>
+		<cooldownTime>3600</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<durationTime>600</durationTime>
+		<iconPath>UI/Abilities/Tech_DefenseMatrix</iconPath>
+		<castSound>RE_Tech_DefenseMatrix</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Shield">
+				<shieldTexPath>UI/AbilityShields/ShieldTech</shieldTexPath>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_HexShield</defName>
-    <label>hex shield</label>
-    <description>Spawn an energy barrier that blocks all fast-moving projectiles, including bullets.</description>
-    <abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
-    <targetMode>Location</targetMode>
-    <range>20</range>
-    <power>1</power>
-    <cooldownTime>3600</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <iconPath>UI/Abilities/Tech_HexShield</iconPath>
-	<castSound>RE_Tech_HexShield</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Building">
-        <building>RE_Tech_EnergyBarrier</building>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_HexShield</defName>
+		<label>hex shield</label>
+		<description>Spawn an energy barrier that blocks all fast-moving projectiles, including bullets.</description>
+		<abilityClass>VFECore.Abilities.Ability_SpawnBuilding</abilityClass>
+		<targetMode>Location</targetMode>
+		<range>20</range>
+		<power>1</power>
+		<cooldownTime>3600</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<iconPath>UI/Abilities/Tech_HexShield</iconPath>
+		<castSound>RE_Tech_HexShield</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Building">
+				<building>RE_Tech_EnergyBarrier</building>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <ThingDef ParentName="BuildingBase">
-    <defName>RE_Tech_EnergyBarrier</defName>
-    <label>energy barrier</label>
-    <description>Energy barrier that blocks all fast-moving projectiles, including bullets.</description>
-    <thingClass>Building</thingClass>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Things/AbilityEffects/HexShield/HexShield</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>Transparent</shaderType>
-	  <damageData>
-		<enabled>false</enabled>
-	  </damageData>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <tickerType>Normal</tickerType>
-    <pathCost>10</pathCost>
-    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>1</fillPercent>
-    <canOverlapZones>false</canOverlapZones>
-    <statBases>
-      <MaxHitPoints>800</MaxHitPoints>
-      <Beauty>0</Beauty>
-      <Flammability>0</Flammability>
-    </statBases>
-    <building>
-      <ai_chillDestination>false</ai_chillDestination>
-      <isInert>true</isInert>
-      <repairable>false</repairable>
-      <deconstructible>false</deconstructible>
-    </building>
-    <rotatable>false</rotatable>
-    <selectable>true</selectable>
-    <castEdgeShadows>false</castEdgeShadows>
-    <designationHotKey>Misc1</designationHotKey>
-    <comps>
-      <li>
-        <compClass>VFECore.Abilities.CompSpawnedBuilding</compClass>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>4</glowRadius>
-        <glowColor>(219,140,98)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>RE_Tech_EnergyBarrier</defName>
+		<label>energy barrier</label>
+		<description>Energy barrier that blocks all fast-moving projectiles, including bullets.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/AbilityEffects/HexShield/HexShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<tickerType>Normal</tickerType>
+		<pathCost>10</pathCost>
+		<pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>1</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>800</MaxHitPoints>
+			<Beauty>0</Beauty>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<repairable>false</repairable>
+			<deconstructible>false</deconstructible>
+		</building>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<castEdgeShadows>false</castEdgeShadows>
+		<designationHotKey>Misc1</designationHotKey>
+		<comps>
+			<li>
+				<compClass>VFECore.Abilities.CompSpawnedBuilding</compClass>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(219,140,98)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_Incinerate</defName>
-    <label>incinerate</label>
-    <description>High-explosive plasma round fired from the user's omni-tool that inflicts damage over time to all nearby enemies.</description>
-    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
-    <targetMode>Location</targetMode>
-    <range>26</range>
-    <radius>4</radius>
-    <cooldownTime>1800</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <power>30</power>
-    <iconPath>UI/Abilities/Tech_Incinerate</iconPath>
-	<castSound>RE_Tech_Incinerate</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
-        <projectile>RE_Tech_IncinerateProjectile</projectile>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_Incinerate</defName>
+		<label>incinerate</label>
+		<description>High-explosive plasma round fired from the user's omni-tool that inflicts damage over time to all nearby enemies.</description>
+		<abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+		<targetMode>Location</targetMode>
+		<range>26</range>
+		<radius>4</radius>
+		<cooldownTime>1800</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<power>30</power>
+		<iconPath>UI/Abilities/Tech_Incinerate</iconPath>
+		<castSound>RE_Tech_Incinerate</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Projectile">
+				<projectile>RE_Tech_IncinerateProjectile</projectile>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <ThingDef ParentName="BaseBullet">
-    <defName>RE_Tech_IncinerateProjectile</defName>
-    <label>high plasma projectile</label>
-    <graphicData>
-      <texPath>Things/AbilityEffects/Shot_Incinerate</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <color>(254,189,58)</color>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>Flame</damageDef>
-      <speed>45</speed>
-      <explosionRadius>2</explosionRadius>
-      <ai_IsIncendiary>true</ai_IsIncendiary>
-    </projectile>
-  </ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RE_Tech_IncinerateProjectile</defName>
+		<label>high plasma projectile</label>
+		<graphicData>
+			<texPath>Things/AbilityEffects/Shot_Incinerate</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(254,189,58)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<speed>45</speed>
+			<explosionRadius>2</explosionRadius>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+	</ThingDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_Overload</defName>
-    <label>overload</label>
-    <description>This power surge overloads electronics, causing shields to burst and mechanical enemies to be stunned.</description>
-    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
-    <targetMode>Location</targetMode>
-    <range>19</range>
-    <radius>6</radius>
-    <cooldownTime>1800</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <iconPath>UI/Abilities/Tech_Overload</iconPath>
-	<castSound>RE_Tech_Overcharge_Shot</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
-        <projectile>RE_Tech_OverloadProjectile</projectile>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_Overload</defName>
+		<label>overload</label>
+		<description>This power surge overloads electronics, causing shields to burst and mechanical enemies to be stunned.</description>
+		<abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+		<targetMode>Location</targetMode>
+		<range>19</range>
+		<radius>6</radius>
+		<cooldownTime>1800</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<iconPath>UI/Abilities/Tech_Overload</iconPath>
+		<castSound>RE_Tech_Overcharge_Shot</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Projectile">
+				<projectile>RE_Tech_OverloadProjectile</projectile>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <ThingDef ParentName="BaseBullet">
-    <defName>RE_Tech_OverloadProjectile</defName>
-    <label>overload projectile</label>
-    <graphicData>
-      <texPath>Things/AbilityEffects/Shot_Overload</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-      <color>(208,228,255)</color>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>EMP</damageDef>
-      <speed>45</speed>
-      <explosionRadius>4</explosionRadius >
-	  <soundExplode>RE_Tech_Overcharge_Explode</soundExplode>
-    </projectile>
-  </ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>RE_Tech_OverloadProjectile</defName>
+		<label>overload projectile</label>
+		<graphicData>
+			<texPath>Things/AbilityEffects/Shot_Overload</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(208,228,255)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>EMP</damageDef>
+			<speed>45</speed>
+			<explosionRadius>4</explosionRadius>
+			<soundExplode>RE_Tech_Overcharge_Explode</soundExplode>
+		</projectile>
+	</ThingDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_Sabotage</defName>
-    <label>sabotage</label>
-    <description>Sabotage weapons and hack synthetics. Compromised synthetics fight on your side.</description>
-    <abilityClass>RimEffect.Ability_Sabotage</abilityClass>
-    <targetMode>Pawn</targetMode>
-    <range>19</range>
-    <cooldownTime>7200</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <power>15</power>
-    <iconPath>UI/Abilities/Tech_Sabotage</iconPath>
-	<castSound>RE_Tech_Sabotage</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_Sabotage</defName>
+		<label>sabotage</label>
+		<description>Sabotage weapons and hack synthetics. Compromised synthetics fight on your side.</description>
+		<abilityClass>RimEffect.Ability_Sabotage</abilityClass>
+		<targetMode>Pawn</targetMode>
+		<range>19</range>
+		<cooldownTime>7200</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<power>15</power>
+		<iconPath>UI/Abilities/Tech_Sabotage</iconPath>
+		<castSound>RE_Tech_Sabotage</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+	</VFECore.Abilities.AbilityDef>
 
-  <VFECore.Abilities.AbilityDef>
-    <defName>RE_Tech_TacticalCloak</defName>
-    <label>tactical cloak</label>
-    <description>When activated, it instantly renders the user invisible to all enemies. Users cannot be targeted by any targetable abilities and powers.</description>
-    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
-    <targetMode>Self</targetMode>
-    <cooldownTime>7200</cooldownTime>
-    <cooldownTimeStatFactors>
-      <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
-    </cooldownTimeStatFactors>
-    <iconPath>UI/Abilities/Tech_TacticalCloak</iconPath>
-	<castSound>RE_Tech_TacticalCloak</castSound>
-    <requiredHediff>
-      <hediffDef>RE_OmniToolHediff</hediffDef>
-      <minimumLevel>1</minimumLevel>
-    </requiredHediff>
-    <modExtensions>
-      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
-        <hediff>RE_Tech_TacticalCloakHediff</hediff>
-      </li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+	<VFECore.Abilities.AbilityDef>
+		<defName>RE_Tech_TacticalCloak</defName>
+		<label>tactical cloak</label>
+		<description>When activated, it instantly renders the user invisible to all enemies. Users cannot be targeted by any targetable abilities and powers.</description>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<targetMode>Self</targetMode>
+		<cooldownTime>7200</cooldownTime>
+		<cooldownTimeStatFactors>
+			<RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
+		</cooldownTimeStatFactors>
+		<iconPath>UI/Abilities/Tech_TacticalCloak</iconPath>
+		<castSound>RE_Tech_TacticalCloak</castSound>
+		<requiredHediff>
+			<hediffDef>RE_OmniToolHediff</hediffDef>
+			<minimumLevel>1</minimumLevel>
+		</requiredHediff>
+		<modExtensions>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>RE_Tech_TacticalCloakHediff</hediff>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
-  <HediffDef>
-    <defName>RE_Tech_TacticalCloakHediff</defName>
-    <label>tactical cloak</label>
-    <description>Renders the user invisible to all enemies. Users cannot be targeted by any targetable abilities and powers.</description>
-    <hediffClass>HediffWithComps</hediffClass>
-    <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>1800~1800</disappearsAfterTicks>
-      </li>
-      <li Class="HediffCompProperties">
-        <compClass>HediffComp_Invisibility</compClass>
-      </li>
-    </comps>
-  </HediffDef>
+	<HediffDef>
+		<defName>RE_Tech_TacticalCloakHediff</defName>
+		<label>tactical cloak</label>
+		<description>Renders the user invisible to all enemies. Users cannot be targeted by any targetable abilities and powers.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800~1800</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+			</li>
+		</comps>
+	</HediffDef>
 
 </Defs>

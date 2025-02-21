@@ -8,6 +8,7 @@
         <targetMode>Self</targetMode>
         <castTime>30</castTime>
         <cooldownTime>3600</cooldownTime>
+        <durationTime>600</durationTime>
         <iconPath>UI/Abilities/Ability_AdrenalineRush</iconPath>
         <modExtensions>
             <li Class="VFECore.Abilities.AbilityExtension_Hediff">
@@ -22,9 +23,7 @@
         <labelNoun>an adrenaline rush</labelNoun>
         <description>Gives the wearer an adrenaline rush</description>
         <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>600~600</disappearsAfterTicks>
-            </li>
+            <li Class="HediffCompProperties_Disappears"/>
         </comps>
         <stages>
             <li>
@@ -46,6 +45,7 @@
         <targetMode>Self</targetMode>
         <castTime>30</castTime>
         <cooldownTime>3600</cooldownTime>
+        <durationTime>600</durationTime>
         <iconPath>UI/Abilities/Ability_CombatMastery</iconPath>
         <modExtensions>
             <li Class="VFECore.Abilities.AbilityExtension_Hediff">
@@ -60,9 +60,7 @@
         <labelNoun>an increased accuracy</labelNoun>
         <description>Gives the wearer increased accuracy</description>
         <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>600~600</disappearsAfterTicks>
-            </li>
+            <li Class="HediffCompProperties_Disappears"/>
         </comps>
         <stages>
             <li>

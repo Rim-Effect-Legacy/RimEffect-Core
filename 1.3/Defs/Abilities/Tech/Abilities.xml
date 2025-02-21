@@ -286,6 +286,7 @@
     <cooldownTimeStatFactors>
       <RE_AbilityCooldownFactor>1</RE_AbilityCooldownFactor>
     </cooldownTimeStatFactors>
+    <durationTime>1800</durationTime>
     <iconPath>UI/Abilities/Tech_TacticalCloak</iconPath>
 	<castSound>RE_Tech_TacticalCloak</castSound>
     <requiredHediff>
@@ -306,9 +307,7 @@
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <comps>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>1800~1800</disappearsAfterTicks>
-      </li>
+      <li Class="HediffCompProperties_Disappears"/>
       <li Class="HediffCompProperties">
         <compClass>HediffComp_Invisibility</compClass>
       </li>
